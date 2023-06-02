@@ -1,0 +1,135 @@
+html{
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(50deg, rgb(49, 77, 52) 0%, rgb(34, 87, 41) 25%, rgb(22, 122, 35) 75%, rgb(10, 160, 30) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.active{
+    background-color: rgb(10, 160, 30);
+}
+/* Animacja */
+#Animeland{
+    overflow: hidden;
+}
+#Anime{
+    display: flex;
+    align-items: center;
+    font-size: 6vh;
+    animation: goRight 6s infinite linear;
+} 
+@keyframes goRight {
+    0% {transform: translateX(105%);color: blue;}
+    50%{color: rgb(255, 153, 0);}
+    75%{color: red;}
+    100% {transform: translateX(-30%);}
+}
+/* Menu poziome */
+#MenuHori{
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    background-color: rgb(5, 71, 14);
+}
+#MenuHori > div > a{
+    padding: 0 1.5vw;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: black;
+    text-decoration: none;
+    float: left;
+}
+#MenuHori > div > a:active{
+    color:red; 
+}
+#MenuHori > div > a:hover{
+    cursor: pointer; 
+    background-color: rgb(10, 160, 30);
+}
+/* Menu pionowe */
+#MainPart{
+    height: 86.5vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:repeat(5, 1fr);
+}
+#MenuVerti{
+    height: 75vh;
+    position: fixed;
+    top: 13.2%;
+    left: 0;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    transform: translate(-90%);
+    animation-play-state: paused;
+}
+@keyframes slide {
+    0%{transform: translate(-90%);}
+    100%{transform: translate(0%);}
+}
+#MenuVerti:hover{
+    cursor: pointer;
+}
+#MenuVerti > #ColorChange{
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15vw;
+    border-radius: 10%;
+    color: rgb(5, 71, 14);
+    background-color: black;
+}
+#MenuVerti > #ColorChange > #slide{
+    border-radius: 50%;
+    height: 3vh;
+    width: 1.5vw;
+    background-color: rgb(5, 71, 14);
+}
+#MenuVertiPart{
+    cursor: initial;
+    width: 90%;
+    height: 50%;
+    background-color: rgb(5, 71, 14);
+}
+#DinoPart{
+    grid-column: 2/5;
+    grid-row: 2/5;
+}
+.puzzle{
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 30px;
+    height: 33vh;
+    width: 25vw;
+    transition: transform 2s ease-out;
+}
+.puzzle:hover{
+    transform: scale(1.2) rotate(3deg);
+}
+#MenuVertiPart> a > div{
+    cursor: pointer;
+    padding: 1vh 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+#MenuVertiPart> div{
+    text-align: center;
+}

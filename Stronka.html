@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Wiem, wymówki wymówkami, ale muszę powiedzieć 
+    że kompletnie wypadł mi z głowy ten projekt,
+    więc jest skończony w jakiś 30-40%. Ale wolę oddać cokolwiek. -->
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="dump.js"></script>
+    <script src="Script.js"></script>
+    <title>Stronka</title>
+</head>
+<body>
+    <div id="Animeland">
+        <div id="Anime">&#8592;ANIMACJA W DRODZE, TEKST SIĘ ZMIENIA&#8592;</div>
+    </div>
+    <div id="MenuHori">
+        <div>
+            <a href="Stronka.html" class="active"><div>Strona główna</div></a>
+            <a><div>Forum</div></a>
+            <a><div>Biblioteka</div></a>
+        </div>
+        <div>
+            <a><div>Kontakt</div></a>
+            <a><div>Pomoc</div></a>
+        </div>
+    </div>
+    <div id="MainPart">
+        <div id="MenuVerti">
+            <div id="ColorChange">Zmiana koloru<span id="slide"></span></div>
+            <div id="MenuVertiPart">
+                <a onclick="ColorShift('purple');"><div>Fioletowy</div></a>
+                <a onclick="ColorShift('red');"><div>Czerwony</div></a>
+                <a onclick="ColorShift('blue');"><div>Niebieski</div></a>
+                <a onclick="ColorShift('def');"><div>Standard</div></a>
+                <div>Nie polecam zmieniać w nocy, wali po oczach</div>
+            </div>
+        </div>
+        <div id="DinoPart"></div>
+    </div>
+</body>
+</html>
